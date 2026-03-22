@@ -1,0 +1,193 @@
+.lasthing{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    height: 4em;
+    align-items: center;
+    color: #FF6100;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    width: 100vw;
+    font-size: 1.1em;
+    justify-content: center;
+    box-shadow: 0px 1px 1px lightgray ;
+    margin-bottom: 1em;
+    background-color: white;
+    padding: 1em;
+}
+
+nav p{
+    margin: 0.5em;
+    text-align: left;
+}
+.tribirdsc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.centerdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 1em;
+}
+.check{
+    height: 7em;
+    width: 7em;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    color: #1BAB4E;
+}
+.line1{
+    color: #FF6900;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.line2{
+    color: #FF6900;
+    margin-top: 1em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 500;
+
+}
+.line3{
+    color: #FF6900;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.nodecor{
+    text-decoration: none;
+    color: white;
+    
+}
+.backbutton{
+    background-color: #FF6900;
+    border-color: #FF6900;
+    box-shadow: none;
+}
+.tribirdsc .birdsc{
+    height: 3em;
+    width: 3em;
+    color: #FF6900;
+
+}
+.tribirdsc .bigbirdc{
+    height: 5em;
+    width: 5em;
+    margin: 1em;
+    color: #FF6100;
+    margin-top: 3em;
+    margin-left: 0.9em;
+}
+.footer{
+    background-color: #101828;
+    color: #7E8694;
+    width: 100vw;
+    min-height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 1000px) {
+    .lasthing{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    height: 4em;
+    align-items: center;
+    color: #FF6100;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    width: 100vw;
+    font-size: 1.1em;
+    justify-content: center;
+    box-shadow: 0px 1px 1px lightgray ;
+    margin-bottom: 1em;
+    background-color: white;
+}
+nav p{
+    margin: 0.5em;
+    
+}
+.tribirdsc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.centerdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 1em;
+}
+.check{
+    height: 7em;
+    width: 7em;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    color: #1BAB4E;
+}
+.line1{
+    color: #FF6900;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.line2{
+    color: #FF6900;
+    margin-top: 1em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 500;
+
+}
+.line3{
+    color: #FF6900;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.nodecor{
+    text-decoration: none;
+    color: white;
+    
+}
+.backbutton{
+    background-color: #FF6900;
+    border-color: #FF6900;
+}
+.tribirdsc .birdsc{
+    height: 3em;
+    width: 3em;
+    color: #FF6900;
+
+}
+.tribirdsc .bigbirdc{
+    height: 5em;
+    width: 5em;
+    margin: 1em;
+    color: #FF6100;
+    margin-top: 3em;
+    margin-left: 0.9em;
+}
+.footer{
+    background-color: #101828;
+    color: #7E8694;
+    width: 100vw;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}

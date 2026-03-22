@@ -1,23 +1,34 @@
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import { Bird , User , CircleAlert} from 'lucide-react';
+import './booknow.css'
 
 export default function BookNow() {
   const form = useRef();
   const [status, setStatus] = useState('');
   const navigate = useNavigate();
-
-  const SERVICE_ID = 'service_705pzha';
-const TEMPLATE_ID = 'template_te6f7au';
-const PUBLIC_KEY = '2Vx08v786tnG_tQQ5';
+  
+  const TEMPLATE_ID = 'template_joqaqcf';
+  const SERVICE_ID = 'service_olzyu68';
+  const PUBLIC_KEY = '40BEz_oWm5qBOAxWn';
 
   const sendEmail = async (e) => {
     e.preventDefault();
     setStatus('Booking...');
 
+    const GradeLevel = form.current.grade_level.value;
+    
+    console.log(GradeLevel);
+    
+    
+
     try {
       await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY);
       setStatus('Booking confirmed! 🎉');
+      setTimeout(() => {
+      navigate('/confirmation');  // ← Your success page
+    }, 0);
     } catch (error) {
       setStatus("Booking failed. Please try again.");
       console.error('EmailJS error:', error);
@@ -25,108 +36,92 @@ const PUBLIC_KEY = '2Vx08v786tnG_tQQ5';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 py-12">
-      <div className="max-w-lg mx-auto p-8 bg-white rounded-2xl shadow-2xl">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">
-            Book Now
-          </h1>
-          <p className="text-gray-600">Secure your seats for This Year's Play</p>
+  <>
+  <div className='kinnet'>
+    <nav className='nav'>
+      <Bird className='bird' />
+      <p>
+        Majella: Where Every Bird is a Member of the Flock
+      </p>
+    </nav>
+    <div>
+      <div className='intro'>
+        <div className='tribirds'>
+          <Bird className='birds'/>
+          <Bird className='birds bigbird'/>
+          <Bird className='birds'/>
         </div>
-
+      <p>Complete Your Booking:</p>
+      <p className='biggerfont'>One step closer to being cleansed</p>
+        
+      </div>
+    
+      <div className='form'>
         <form ref={form} onSubmit={sendEmail} className="space-y-6">
           {/* Name */}
-          <div>
-            <label className="block text-sm font-semibold mb-2 text-gray-700">Full Name</label>
+            <div className='contact information'>
+              <User className='user'/>
+              <p>Contact Information</p>
+              </div>
+          
+          <div className="name">
+            <label className="labelname label">Full Name *</label>
             <input 
               type="text" 
               name="user_name" 
               required
-              className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-purple-200 focus:border-purple-400 transition-all"
-              placeholder="John Doe"
+              placeholder="Enter your name" 
+              className='max-width inputstyle'
             />
           </div>
 
           {/* Email */}
-          <div>
-            <label className="block text-sm font-semibold mb-2 text-gray-700">Email</label>
-            <input 
+          <div className='email1'>
+            <label className="labelemail label">Email Address *</label>
+            <input  
               type="email" 
               name="user_email" 
               required
-              className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-purple-200 focus:border-purple-400 transition-all"
-              placeholder="john@example.com"
+              placeholder="Wren@example.com"
+               className='max-width inputstyle'
             />
           </div>
 
-          {/* Phone */}
-          <div>
-            <label className="block text-sm font-semibold mb-2 text-gray-700">Phone</label>
-            <input 
-              type="tel" 
-              name="phone" 
-              required
-              className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-purple-200 focus:border-purple-400 transition-all"
-              placeholder="+63 912 345 6789"
-            />
-          </div>
-
-          {/* Show Date */}
-          <div>
-            <label className="block text-sm font-semibold mb-2 text-gray-700">Preferred Show Date</label>
-            <select name="show_date" required className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-purple-200 focus:border-purple-400">
-              <option value="">Select date</option>
-              <option value="March 20, 2026">March 20, 2026 - 7PM</option>
-              <option value="March 21, 2026">March 21, 2026 - 2PM</option>
-              <option value="March 22, 2026">March 22, 2026 - 7PM</option>
+          <div className='gradelevel'>
+            <label className='labelphonenumber label'>Grade Level *</label>
+            <select className='max-width dropdown' defaultValue="" required name="grade_level">
+              <option value=""disabled hidden>Select your grade level</option>
+              <option value="1">Grade 10</option>
+              <option value="2">Grade 9</option>
+              <option value="3">Grade 8</option>
+              <option value="4">Grade 7</option>
             </select>
           </div>
 
-          {/* Tickets */}
-          <div>
-            <label className="block text-sm font-semibold mb-2 text-gray-700">Number of Tickets</label>
-            <select name="tickets" required className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-purple-200 focus:border-purple-400">
-              <option value="">Select quantity</option>
-              <option value="1">1 Ticket - ₱1,500</option>
-              <option value="2">2 Tickets - ₱2,800</option>
-              <option value="4">4 Tickets - ₱5,400</option>
-            </select>
-          </div>
-
-          {/* Message */}
-          <div>
-            <label className="block text-sm font-semibold mb-2 text-gray-700">Special Requests</label>
-            <textarea 
-              name="message" 
-              rows="4"
-              className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-purple-200 focus:border-purple-400 resize-vertical"
-              placeholder="Seating preferences, accessibility needs, etc."
-            />
+          <div className="TermsAndConditions">
+            <CircleAlert className='a alert'/>
+            <h1 className='b acknowledgement'>Transformation Acknowledgement</h1>
+            <p className='c exposition'>By booking this journey to Majella, you understand that your children will participate in traditional games and activities designed to help them become the bird to rise among the flock. The scenery and experiences are crafted to cleanse and transform.</p>
+            <input type="checkbox" required className='d checkbox' />
+            <p className='e accept'>I acknowledge and am ready to begin my transformation</p>
           </div>
 
           <button 
             type="submit" 
             disabled={status === 'Booking...'}
-            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-6 px-8 rounded-2xl font-bold text-lg shadow-xl hover:from-purple-700 hover:to-blue-700 transform hover:-translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="request"
           >
-            {status === 'Booking...' ? '🎭 Securing Seats...' : '🎭 BOOK NOW & PAY LATER'}
+            Submit Booking Request
           </button>
 
-          {status && (
-            <div className={`p-4 rounded-xl text-center font-semibold ${
-              status.includes('confirmed') 
-                ? 'bg-green-100 border-2 border-green-300 text-green-800' 
-                : 'bg-red-100 border-2 border-red-300 text-red-800'
-            }`}>
-              {status}
-            </div>
-          )}
+          
         </form>
-
-        <p className="text-xs text-gray-500 text-center mt-6">
-          Secure booking • No payment now • Confirm via email
-        </p>
       </div>
-    </div>
+      </div>
+      <footer className='footer'>
+        <p>© 2026 O'Doyles. Every Sin Will be Washed.</p>
+      </footer>
+      </div>
+        </>
   );
 }

@@ -154,8 +154,8 @@ button{
     height: 3em;
     width: 10.5em;
     border-radius: 3em;
-    background-color: blue;
-    border: blue 1px solid;
+    background-color: #FF6100;
+    border: #FF6100 1px solid;
     color: white;
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;

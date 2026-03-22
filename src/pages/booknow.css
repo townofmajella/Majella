@@ -1,0 +1,483 @@
+body{
+    height: 100%;
+    background-color: #FFF9F1   ;
+}
+.kinnet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav .bird{
+    height: 2em;
+    width: 2em;
+    min-width: 30px;
+    min-height: 30px;
+}
+nav{
+    display: flex;
+    height: 4em;
+    align-items: center;
+    color: #FF6100;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    width: 100vw;
+    font-size: 1.1em;
+    justify-content: center;
+    box-shadow: 0px 1px 1px lightgray ;
+    margin-bottom: 1em;
+    background-color: white;
+}
+nav p{
+    margin: 0.5em;
+    text-align: left;
+}
+.tribirds{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tribirds .birds{
+    height: 2em;
+    width: 2em;
+    color: #FF6900;
+
+}
+.tribirds .bigbird{
+    height: 3em;
+    width: 3em;
+    margin: 1em;
+    color: #FF6100;
+    margin-top: 2em;
+    margin-left: 0.9em;
+}
+.intro{
+    height: auto;
+    margin-bottom: 5em;
+}
+.intro p {
+    color: #FF6100;
+}
+.biggerfont{
+    font-weight: 300;
+    font-size: 1.5em;
+}
+.form{
+    border-radius: 1em;
+    border: #FF6100 1px solid;
+    padding: 2em;
+    background-color: white;
+    box-shadow: 0px 0px 10px lightgray;
+    width: fit-content;
+    margin-bottom: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.contact{
+    display: flex;
+    color: #FF6100;
+    margin: 1em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+}
+.name , .email1, .gradelevel{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.label{
+    color: #4E5868;
+    font-weight: 800;
+    margin: 1em;
+    margin-left: 0em;
+}
+.max-width{
+    width: 100%;
+}
+.user{
+    margin-right: 0.5em;
+}
+.inputstyle{
+    border-radius: 0.5em;
+    border: lightgrey 1px solid;
+    padding: 0.8em;
+    font-size: 1.1em;
+}
+
+.inputstyle:focus {
+    outline: none !important;
+    border: #FF6100 2px solid;
+  
+}
+
+.dropdown{
+    -webkit-appearance: none;  
+    -moz-appearance: none;     
+    appearance: none;        
+    border-radius: 0.5em;
+    border: lightgrey 1px solid;
+    padding: 0.8em;
+    background-color: white;
+    font-size: 1.1em;  
+    
+}
+.dropdown:invalid {
+  color: #767676 !important; 
+}
+
+.TermsAndConditions{
+    display: grid;
+    grid-template:
+        "a b b" 18.5%    
+        "a c c" 63%   
+        "d e e" 18.5%
+        / 1fr 10fr 10fr;  
+    margin-top: 5em;
+    padding: 1em;
+    border: #FFD6A7 2px solid;
+    border-radius: 1em;
+    background-color: #FFF7ED;
+    place-items: start;
+    text-align: start;
+    color: #535E6D;
+    font-weight: 500;
+}
+.e{
+    grid-area: e;
+}
+.alert{
+    color: #F54900;
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 0.3em;
+    margin-right: 1em;
+    
+}
+.acknowledgement{
+    font-size: 1em;
+    color: #87381B;
+    margin: 0em;
+    margin-top: 0.5em;
+    text-align: left;
+}
+
+.accept{
+    margin-top: 0.5em;
+    width: 100%;
+    
+}
+/* .checkbox{
+    margin-top: 2em;
+    border-color: #FFD6A7;
+    color: #FFD6A7;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: #FFD6A7 2px solid;
+}
+.checkbox:checked {
+  background-color: #3b82f6;  Blue - change this color
+  border-color: #3b82f6;
+}
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+} */
+.request{
+    background-color: #FF6700;
+    border-color: #FF6700;
+    width: 70%;
+    margin: 0em ;
+    margin-top: 2em;
+}
+.graytext{
+    color: #535E6D;
+    font-weight: 500;
+}
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f97316; 
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  margin-top: 1.4em;
+}
+.exposition{
+    margin-top: 0.5em;
+    font-size: 0.9em;
+}
+
+/* ✅ ORANGE background + WHITE checkmark when checked */
+.checkbox:checked {
+  background-color: #f97316;  
+  border-color: #f97316;
+}
+
+/* ✅ WHITE checkmark*/
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 4.5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffffff;      
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.footer{
+    background-color: #101828;
+    color: #7E8694;
+    width: 100vw;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 1000px) {body{
+    height: 100%;
+    background-color: #FFF9F1   ;
+}
+.kinnet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    height: 4em;
+    align-items: center;
+    color: #FF6100;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    width: 100vw;
+    font-size: 1.1em;
+    justify-content: center;
+    box-shadow: 0px 1px 1px lightgray ;
+    margin-bottom: 1em;
+    background-color: white;
+}
+nav p{
+    margin: 0.5em;
+    
+}
+.tribirds{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tribirds .birds{
+    height: 2em;
+    width: 2em;
+    color: #FF6900;
+
+}
+.tribirds .bigbird{
+    height: 3em;
+    width: 3em;
+    margin: 1em;
+    color: #FF6100;
+    margin-top: 2em;
+    margin-left: 0.9em;
+}
+.intro{
+    height: auto;
+    margin-bottom: 5em;
+}
+.intro p {
+    color: #FF6100;
+}
+.biggerfont{
+    font-weight: 300;
+    font-size: 1.5em;
+}
+.form{
+    border-radius: 1em;
+    border: #FF6100 1px solid;
+    padding: 2em;
+    background-color: white;
+    box-shadow: 0px 0px 10px lightgray;
+    width: 40vw;
+    margin-bottom: 3em;
+}
+.contact{
+    display: flex;
+    color: #FF6100;
+    margin: 1em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+}
+.name , .email1, .gradelevel{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.label{
+    color: #4E5868;
+    font-weight: 800;
+    margin: 1em;
+    margin-left: 0em;
+}
+.max-width{
+    width: 100%;
+}
+.user{
+    margin-right: 0.5em;
+}
+.inputstyle{
+    border-radius: 0.5em;
+    border: lightgrey 1px solid;
+    padding: 0.8em;
+    font-size: 1.1em;
+}
+
+.inputstyle:focus {
+    outline: none !important;
+    border: #FF6100 2px solid;
+  
+}
+
+.dropdown{
+    -webkit-appearance: none;  
+    -moz-appearance: none;     
+    appearance: none;        
+    border-radius: 0.5em;
+    border: lightgrey 1px solid;
+    padding: 0.8em;
+    background-color: white;
+    font-size: 1.1em;  
+    
+}
+.dropdown:invalid {
+  color: #767676 !important; 
+}
+
+.TermsAndConditions{
+    display: grid;
+    grid-template:
+        "a b b" 1fr     
+        "a c c" 2fr    
+        "d e e" 1fr
+        / 1fr 10fr 10fr;  
+    margin-top: 5em;
+    padding: 1em;
+    border: #FFD6A7 2px solid;
+    border-radius: 1em;
+    background-color: #FFF7ED;
+    place-items: start;
+    text-align: start;
+    color: #535E6D;
+    font-weight: 500;
+}
+.e{
+    grid-area: e;
+}
+.alert{
+    color: #F54900;
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 0.3em;
+}
+.acknowledgement{
+    font-size: 1em;
+    color: #87381B;
+    margin: 0em;
+    margin-top: 0.5em;
+}
+
+.accept{
+    margin-top: 1.5em;
+    width: 100%;
+    
+}
+/* .checkbox{
+    margin-top: 2em;
+    border-color: #FFD6A7;
+    color: #FFD6A7;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: #FFD6A7 2px solid;
+}
+.checkbox:checked {
+  background-color: #3b82f6;  Blue - change this color
+  border-color: #3b82f6;
+}
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+} */
+.request{
+    background-color: #FF6700;
+    border-color: #FF6700;
+    width: 50%;
+    margin: 0em ;
+    margin-top: 3em;
+}
+.graytext{
+    color: #535E6D;
+    font-weight: 500;
+}
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f97316; 
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  margin-top: 2em;
+}
+.exposition{
+    margin-top: 0.5em;
+}
+
+/* ✅ ORANGE background + WHITE checkmark when checked */
+.checkbox:checked {
+  background-color: #f97316;  
+  border-color: #f97316;
+}
+
+/* ✅ WHITE checkmark*/
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 4.5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffffff;      
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.footer{
+    background-color: #101828;
+    color: #7E8694;
+    width: 100vw;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}

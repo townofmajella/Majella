@@ -1,5 +1,6 @@
 import './majella.css'
 import { Bird } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
 
 function TitleCard(){
     return (
@@ -12,7 +13,7 @@ function TitleCard(){
                 <h1>MAJELLA</h1>
                 <p className='text'>Why not a vacation to Majella?</p>
                 <p className='text'>The scenery and games in Majella are sure to cleanse them</p>
-                <button><a href="#vox" className='link'>Discover Majella</a></button>
+                <button><HashLink className='link' smooth to="#vox">Discover Majella</HashLink></button>
                 </div>
             </div>
         </>
