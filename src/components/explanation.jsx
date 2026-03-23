@@ -51,7 +51,7 @@ function Description() {
       <div className='desc'>
         <div className='games'>
         
-        <h3>Game & Activities</h3>
+        <h3>Games & Activities</h3>
         <p>Watch your children transform as they discover the joy of outdoor adventures. Our activities are designed to channel their energy into positive experiences!</p>
         </div>
         <div className='vrox'>
