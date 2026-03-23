@@ -17,9 +17,9 @@ export default function BookNow() {
     e.preventDefault();
     setStatus('Booking...');
 
-    const GradeLevel = form.current.grade_level.value;
+    const GradeLevel = form.current.user_name.value;
     
-    console.log(GradeLevel);
+    console.log(user_name);
     
     
 
