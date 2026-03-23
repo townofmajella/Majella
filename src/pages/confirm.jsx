@@ -19,8 +19,8 @@ export default function Confirmationpage(){
             </div>
             <CircleCheckBig className='check'/>
             <p className='line1'>Booking Request Submitted!</p>
-            <p className='line2'>Your journey to transformation has begun</p>
-            <p className='line3'>✧ The flock awaits your arrival ✧</p>
+            <p className='line2'>Your journey to reformation starts here</p>
+            <p className='line3'>✧ The festival is about to begin ✧</p>
             <button className='backbutton'><a href="/kest/#/" className='nodecor'>Return Home</a></button>
         </div>
         <footer className='footer'>
